@@ -11,5 +11,5 @@ RUN make h2o
 
 EXPOSE 8080
 COPY /h2o.conf /h2o.conf
-ADD /webapp /app
+COPY /webapp /app
 CMD ./h2o -c /h2o.conf
