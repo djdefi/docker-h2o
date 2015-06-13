@@ -1,13 +1,14 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y git openssl build-essential cmake libssl-dev libyaml-dev
+RUN apt-get update && apt-get install -y git openssl build-essential cmake libssl-dev libyaml-dev \
+	--no-install-recommends \
+	&& rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/kazuho/h2o.git
+RUN git clone https://github.com/kazuho/h2o.git && \
+    git submodule update --init --recursive
 
 WORKDIR /h2o
-RUN git submodule update --init --recursive
-RUN cmake .
-RUN make h2o
+RUN cmake . && make h2o
 
 EXPOSE 8080
 COPY /h2o.conf /h2o.conf
