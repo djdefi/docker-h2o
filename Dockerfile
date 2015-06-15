@@ -5,10 +5,11 @@ RUN apt-get update && apt-get install -y ca-certificates git openssl build-essen
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/kazuho/h2o.git && \
-    git submodule update --init --recursive
-
+    
 WORKDIR /h2o
-RUN cmake . && make h2o
+RUN git submodule update --init --recursive && \
+    cmake . && \
+    make h2o
 
 EXPOSE 8080
 COPY /h2o.conf /h2o.conf
