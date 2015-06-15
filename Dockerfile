@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y ca-certificates git openssl build-essen
 	--no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/kazuho/h2o.git && \
+RUN git clone https://github.com/kazuho/h2o.git
     
 WORKDIR /h2o
 RUN git submodule update --init --recursive && \
