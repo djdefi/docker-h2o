@@ -4,7 +4,6 @@ env:
   COMPOSE_VERSION: 1.7.1
 
 before_install:
- - sudo apt-get install -y linux-image-virtual kernel linux-image-extra-virtual
  - curl -sSL https://get.docker.com/ | sudo sh
  - sudo pip install docker-compose
  - curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
