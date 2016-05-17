@@ -1,5 +1,5 @@
 # docker-h2o
-Docker container for [h2o](https://github.com/kazuho/h2o)
+Docker container for [h2o](https://github.com/kazuho/h2o) [![Build Status](https://travis-ci.org/djdefi/docker-h2o.svg?branch=master)](https://travis-ci.org/djdefi/docker-h2o)
 
 # Automated Build
 ```bash
