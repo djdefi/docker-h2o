@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 
 env:
-  COMPOSE_VERSION: 1.7.1
+  COMPOSE_VERSION: 1.4.2
 
 before_install:
  - sudo pip install docker-compose
