@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:bullseye
 
 RUN apt-get update && apt-get install -y ca-certificates git openssl build-essential cmake libssl-dev libyaml-dev \
 	--no-install-recommends \
