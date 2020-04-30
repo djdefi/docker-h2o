@@ -1,6 +1,6 @@
-FROM debian:jessie
+FROM debian:bullseye
 
-RUN apt-get update && apt-get install -y ca-certificates git openssl build-essential cmake libssl-dev libyaml-dev \
+RUN apt-get update && apt-get install -y ca-certificates git openssl build-essential cmake zlib1g-dev libssl-dev libyaml-dev \
 	--no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
